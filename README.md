@@ -7,6 +7,42 @@
 |Dimas Aditya Putranto|312210489|TI.22.A5|
 |Hardi Wirkan|312210491|TI.22.A5|
 
+**source code untuk melakukan segemntasi gambar menggunakan 
+``
+import numpy as np
+import matplotlib.pyplot as plt
+import cv2
+%matplotlib inline
+# unutk membaca gambar gunakan gambar sesuai dengan yg dimiliki
+image = cv2.imread('images/monarch.jpg')
+# Change color to RGB (from BGR)
+image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+plt.imshow(image)
+
+# berfungsi untuk Membentuk ulang gambar menjadi susunan piksel 2D dan 3 nilai
+warna (RGB)
+pixel_vals = image.reshape((-1,3))
+# berfungsi untuk mengkonversikan ke tipe float
+pixel_vals = np.float32(pixel_vals)
+
+#baris kode di bawah ini menentukan kriteria agar algoritme berhenti berjalan,
+#yang akan terjadi adalah 100 iterasi dijalankan atau epsilon (yang merupakan
+akurasi yang dibutuhkan)
+#menjadi 85%
+criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 100, 0.85)
+# lalu lakukan k-means clustering dengan jumlah cluster yang ditetapkan sebagai 3
+#juga pusat acak pada awalnya dipilih untuk pengelompokan k-means
+k = 3
+retval, labels, centers = cv2.kmeans(pixel_vals, k, None, criteria, 10,
+cv2.KMEANS_RANDOM_CENTERS)
+# mengonversi data menjadi nilai 8-bit
+centers = np.uint8(centers)
+segmented_data = centers[labels.flatten()]
+# membentuk ulang data menjadi dimensi gambar asli
+segmented_image = segmented_data.reshape((image.shape))
+plt.imshow(segmented_image)
+``
+
 **Gambar awal**
 
 ![Aspose Words 557df43f-e579-4a8e-abbd-d9bec1c0f9ea 001](https://github.com/Muhjat7/k-means/assets/129918243/218d9fd2-1b14-4cbd-8312-f33ab1074c34)![Aspose Words 557df43f-e579-4a8e-abbd-d9bec1c0f9ea 002](https://github.com/Muhjat7/k-means/assets/129918243/267662c9-6524-4e9b-a0b9-df51bafeadcd)
