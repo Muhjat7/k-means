@@ -1,13 +1,13 @@
-﻿**Uas pengelola citra**
+﻿**segmentasi citra gambar menggunakan metode k-means clustering**
 
 |Nama|Nim|Kelas|
 | :-: | :-: | :-: |
-|Idris Syahrudin|312210467|TI.22.A5|
 |Muhamad Jati Wasesa|312210481|TI.22.A5|
+|Idris Syahrudin|312210467|TI.22.A5|
 |Dimas Aditya Putranto|312210489|TI.22.A5|
 |Hardi Wirkan|312210491|TI.22.A5|
 
-**source code untuk melakukan segemntasi gambar menggunakan K-means**
+**source code untuk melakukan segmentasi citra gambar menggunakan K-means**
 ```
 import numpy as np
 import matplotlib.pyplot as plt
