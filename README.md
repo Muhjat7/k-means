@@ -7,8 +7,8 @@
 |Dimas Aditya Putranto|312210489|TI.22.A5|
 |Hardi Wirkan|312210491|TI.22.A5|
 
-**source code untuk melakukan segemntasi gambar menggunakan 
-``
+**source code untuk melakukan segemntasi gambar menggunakan K-means**
+```
 import numpy as np
 import matplotlib.pyplot as plt
 import cv2
@@ -41,7 +41,7 @@ segmented_data = centers[labels.flatten()]
 # membentuk ulang data menjadi dimensi gambar asli
 segmented_image = segmented_data.reshape((image.shape))
 plt.imshow(segmented_image)
-``
+```
 
 **Gambar awal**
 
