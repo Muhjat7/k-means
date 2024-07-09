@@ -7,7 +7,7 @@
 |Dimas Aditya Putranto|312210489|TI.22.A5|
 |Hardi Wirkan|312210491|TI.22.A5|
 
-**source code untuk melakukan segmentasi citra gambar menggunakan K-means**
+**source code untuk melakukan segmentasi citra gambar menggunakan K-means clustering**
 ```
 import numpy as np
 import matplotlib.pyplot as plt
