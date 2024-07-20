@@ -5,7 +5,7 @@
 |Muhamad Jati Wasesa|312210481|TI.22.A5|
 |Idris Syahrudin|312210467|TI.22.A5|
 |Dimas Aditya Putranto|312210489|TI.22.A5|
-|Hardi Wirkan|312210491|TI.22.A5|
+|Hardi Wirkan|312210492|TI.22.A5|
 
 **source code untuk melakukan segmentasi citra gambar menggunakan K-means clustering**
 ```
